@@ -3,6 +3,7 @@ import { About } from "@/components/About";
 import { TechApproach } from "@/components/TechApproach";
 import { motion } from "framer-motion";
 import { Code2, Brain, Cpu, BarChart3 } from "lucide-react";
+import { ContactForm } from "@/components/ContactForm";
 
 const features = [
   {
@@ -95,13 +96,7 @@ export default function Home() {
               for deg eller din virksomhet? Vi er alltid åpne for nye muligheter og diskusjoner om 
               fremtidens teknologi.
             </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 rounded-lg bg-primary text-primary-foreground font-medium"
-            >
-              Ta kontakt med oss
-            </motion.button>
+            <ContactForm />
           </motion.div>
         </div>
       </section>
