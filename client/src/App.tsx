@@ -18,8 +18,11 @@ function Router() {
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
+      <a href="#main-content" className="skip-to-content">
+        Skip to main content
+      </a>
       <Navbar />
-      <main className="pt-16">
+      <main id="main-content" className="pt-16" tabIndex={-1}>
         <Router />
       </main>
       <Toaster />
