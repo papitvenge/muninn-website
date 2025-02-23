@@ -12,18 +12,20 @@ export function About() {
           className="max-w-4xl mx-auto"
         >
           <h2 className="text-3xl font-bold mb-8 text-center">Om Oss</h2>
-          
+
           <div className="space-y-6 text-lg text-muted-foreground">
             <p>
-              Vi kombinerer avansert teknologi med praktiske anvendelser for å skape produkter 
-              og tjenester som forbedrer effektivitet, sikkerhet og samhandling i ulike bransjer.
+              I en verden der teknologi utvikler seg i et stadig raskere tempo, er Muninn Utvikling AS 
+              dedikert til å ligge i forkant av innovasjon. Vi spesialiserer oss på å utvikle avanserte 
+              teknologiske løsninger som kombinerer kunstig intelligens, nettverksbaserte systemer og 
+              autonome prosesser.
             </p>
-            
+
             <p>
-              Vi jobber med alt fra mobil- og webutvikling til spesialiserte løsninger innen 
-              kunstig intelligens, dataanalyse og IoT. Gjennom vår tverrfaglige tilnærming 
-              sørger vi for at våre løsninger ikke bare er teknologisk robuste, men også 
-              brukervennlige og skalerbare.
+              Vår tilnærming bygger på en filosofi om å koble sammen intelligens og teknologi på en 
+              sømløs måte. Inspirert av norrøn mytologi, der ravnen Muninn symboliserer hukommelse og 
+              kunnskap, utvikler vi systemer som overvåker, analyserer og handler basert på avanserte 
+              algoritmer og dataanalyse.
             </p>
 
             <div className="bg-card p-6 rounded-lg mt-8">

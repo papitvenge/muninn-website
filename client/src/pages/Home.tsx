@@ -1,5 +1,6 @@
 import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
+import { TechApproach } from "@/components/TechApproach";
 import { motion } from "framer-motion";
 import { Code2, Brain, Cpu, BarChart3 } from "lucide-react";
 
@@ -40,7 +41,9 @@ export default function Home() {
         <About />
       </section>
 
-      <section id="tjenester" className="py-20 bg-muted/50">
+      <TechApproach />
+
+      <section id="tjenester" className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <motion.h2
             className="text-3xl font-bold mb-12 text-center"
@@ -73,6 +76,32 @@ export default function Home() {
                 <p className="text-muted-foreground">{feature.description}</p>
               </motion.div>
             ))}
+          </motion.div>
+        </div>
+      </section>
+
+      <section id="contact" className="py-20 bg-muted">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-2xl mx-auto text-center"
+          >
+            <h2 className="text-3xl font-bold mb-4">Vil du vite mer?</h2>
+            <p className="text-lg text-muted-foreground mb-8">
+              Er du interessert i å samarbeide eller lære mer om hvordan våre løsninger kan gi verdi 
+              for deg eller din virksomhet? Vi er alltid åpne for nye muligheter og diskusjoner om 
+              fremtidens teknologi.
+            </p>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-8 py-3 rounded-lg bg-primary text-primary-foreground font-medium"
+            >
+              Ta kontakt med oss
+            </motion.button>
           </motion.div>
         </div>
       </section>
