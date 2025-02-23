@@ -21,19 +21,19 @@ export function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link href="/">
-            <motion.a 
+            <motion.span 
               className="text-2xl font-bold text-primary cursor-pointer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               Muninn
-            </motion.a>
+            </motion.span>
           </Link>
 
           <div className="hidden md:flex space-x-8">
             {links.map((link) => (
               <Link key={link.href} href={link.href}>
-                <motion.a
+                <motion.span
                   className={`text-sm font-medium cursor-pointer ${
                     location === link.href 
                       ? "text-primary" 
@@ -43,7 +43,7 @@ export function Navbar() {
                   whileTap={{ y: 0 }}
                 >
                   {link.label}
-                </motion.a>
+                </motion.span>
               </Link>
             ))}
           </div>
