@@ -4,23 +4,23 @@ import { storage } from "./storage";
 import path from "path";
 
 export async function registerRoutes(app: Express): Promise<Server> {
-  // API routes
+  // Health check endpoint
   app.get('/api/health', (req, res) => {
-    res.json({ status: 'ok' });
+    res.json({ status: 'ok', timestamp: new Date().toISOString() });
   });
 
-  // Handle client-side routing by serving index.html for all non-API routes
+  // Handle client-side routing
   app.get('*', (req, res, next) => {
     if (req.path.startsWith('/api')) {
       next();
       return;
     }
-    // Let Vite handle the response in development
+
     if (process.env.NODE_ENV === 'development') {
       next();
       return;
     }
-    // In production, serve the static files
+
     res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
   });
 
