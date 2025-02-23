@@ -60,9 +60,16 @@ app.use((req, res, next) => {
     serveStatic(app);
   }
 
-  // ALWAYS serve the app on port 5000
+  // Get public URL from Replit environment
   const port = 5000;
   server.listen(port, "0.0.0.0", () => {
-    log(`Server running at http://0.0.0.0:${port}`);
+    const localUrl = `http://0.0.0.0:${port}`;
+    log(`Server running at ${localUrl}`);
+
+    // Log Replit public URL if available
+    if (process.env.REPL_SLUG && process.env.REPL_OWNER) {
+      const publicUrl = `https://${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co`;
+      log(`Public URL: ${publicUrl}`);
+    }
   });
 })();
