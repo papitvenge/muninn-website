@@ -4,31 +4,34 @@ import { TechApproach } from "@/components/TechApproach";
 import { motion } from "framer-motion";
 import { Code2, Brain, Cpu, BarChart3 } from "lucide-react";
 import { ContactForm } from "@/components/ContactForm";
-
-const features = [
-  {
-    title: "Softwareutvikling",
-    description: "Moderne og skalerbare digitale løsninger for web og mobil.",
-    Icon: Code2
-  },
-  {
-    title: "Kunstig intelligens",
-    description: "Utvikling av AI-drevne systemer for analyse, automatisering og beslutningsstøtte.",
-    Icon: Brain
-  },
-  {
-    title: "IoT og Smart Teknologi",
-    description: "Tilkobling av fysiske enheter for smarte og effektive løsninger.",
-    Icon: Cpu
-  },
-  {
-    title: "Datadrevet Innsikt",
-    description: "Avansert dataanalyse og visualisering for bedre forretningsbeslutninger.",
-    Icon: BarChart3
-  }
-];
+import { useTranslation } from "react-i18next";
 
 export default function Home() {
+  const { t } = useTranslation();
+
+  const features = [
+    {
+      title: t('services.items.0.title'),
+      description: t('services.items.0.description'),
+      Icon: Code2
+    },
+    {
+      title: t('services.items.1.title'),
+      description: t('services.items.1.description'),
+      Icon: Brain
+    },
+    {
+      title: t('services.items.2.title'),
+      description: t('services.items.2.description'),
+      Icon: Cpu
+    },
+    {
+      title: t('services.items.3.title'),
+      description: t('services.items.3.description'),
+      Icon: BarChart3
+    }
+  ];
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -53,7 +56,7 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            Hva Vi Jobber Med
+            {t('services.title')}
           </motion.h2>
 
           <motion.div
@@ -90,11 +93,9 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="max-w-2xl mx-auto text-center"
           >
-            <h2 className="text-3xl font-bold mb-4">Vil du vite mer?</h2>
+            <h2 className="text-3xl font-bold mb-4">{t('contact.cta.title')}</h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Er du interessert i å samarbeide eller lære mer om hvordan våre løsninger kan gi verdi 
-              for deg eller din virksomhet? Vi er alltid åpne for nye muligheter og diskusjoner om 
-              fremtidens teknologi.
+              {t('contact.cta.description')}
             </p>
             <ContactForm />
           </motion.div>

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Activity, Link2, Navigation, Brain } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const approaches = [
   {
@@ -25,6 +26,8 @@ const approaches = [
 ];
 
 export function TechApproach() {
+  const { t } = useTranslation();
+
   return (
     <section className="py-20 bg-muted">
       <div className="container mx-auto px-4">
@@ -35,9 +38,9 @@ export function TechApproach() {
           transition={{ duration: 0.6 }}
           className="max-w-4xl mx-auto text-center"
         >
-          <h2 className="text-3xl font-bold mb-4">Vår teknologi og tilnærming</h2>
+          <h2 className="text-3xl font-bold mb-4">{t('techApproach.title')}</h2>
           <p className="text-lg text-muted-foreground mb-12">
-            MUNINN – Monitoring, Unifying, Navigating, Integrating Neural Networks
+            {t('techApproach.subtitle')}
           </p>
         </motion.div>
 
@@ -54,8 +57,8 @@ export function TechApproach() {
               <div className="flex items-start gap-4">
                 <approach.Icon className="w-8 h-8 text-primary mt-1" />
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">{approach.title}</h3>
-                  <p className="text-muted-foreground">{approach.description}</p>
+                  <h3 className="text-xl font-semibold mb-2">{t(`techApproach.items.${index}.title`)}</h3>
+                  <p className="text-muted-foreground">{t(`techApproach.items.${index}.description`)}</p>
                 </div>
               </div>
             </motion.div>

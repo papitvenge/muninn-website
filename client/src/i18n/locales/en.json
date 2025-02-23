@@ -15,9 +15,56 @@
       "text": "We have a close collaboration with Jotun Development AS, and together we explore new technological possibilities to meet tomorrow's challenges. Our shared office at Jernbanevegen 6, 2900 Fagernes serves as a dynamic development environment where innovation and creativity are at the center."
     }
   },
+  "techApproach": {
+    "title": "Our Technology and Approach",
+    "subtitle": "MUNINN – Monitoring, Unifying, Navigating, Integrating Neural Networks",
+    "items": [
+      {
+        "title": "Monitoring",
+        "description": "Collection, processing, and analysis of large data volumes to provide real-time insights and improved decision-making. We create systems that can interpret and react to data in dynamic environments."
+      },
+      {
+        "title": "Unifying",
+        "description": "We integrate different technologies to create comprehensive solutions. Our systems are designed to work seamlessly across platforms, whether in AI, automation, or data structures."
+      },
+      {
+        "title": "Navigating",
+        "description": "Intelligent and autonomous systems that can adapt to different scenarios and environments. We work with solutions that enable precise navigation and process optimization."
+      },
+      {
+        "title": "Integrating Neural Networks",
+        "description": "We leverage artificial intelligence and machine learning to create flexible and scalable solutions. Using advanced neural networks, our systems can learn, adapt, and improve over time."
+      }
+    ]
+  },
+  "services": {
+    "title": "What We Do",
+    "items": [
+      {
+        "title": "Software Development",
+        "description": "Modern and scalable digital solutions for web and mobile."
+      },
+      {
+        "title": "Artificial Intelligence",
+        "description": "Development of AI-driven systems for analysis, automation, and decision support."
+      },
+      {
+        "title": "IoT and Smart Technology",
+        "description": "Connecting physical devices for smart and efficient solutions."
+      },
+      {
+        "title": "Data-Driven Insights",
+        "description": "Advanced data analysis and visualization for better business decisions."
+      }
+    ]
+  },
   "contact": {
     "title": "Contact Us",
     "description": "Send us a message, and we'll get back to you as soon as possible.",
+    "cta": {
+      "title": "Want to Learn More?",
+      "description": "Are you interested in collaborating or learning more about how our solutions can provide value for you or your business? We're always open to new opportunities and discussions about future technology."
+    },
     "form": {
       "name": "Name",
       "name_placeholder": "Your name",

@@ -15,9 +15,56 @@
       "text": "Vi har et tett samarbeid med Jotun-Utvikling AS, og sammen utforsker vi nye teknologiske muligheter for å møte morgendagens utfordringer. Vårt felles kontor i Jernbanevegen 6, 2900 Fagernes fungerer som et dynamisk utviklingsmiljø der innovasjon og kreativitet står i sentrum."
     }
   },
+  "techApproach": {
+    "title": "Vår teknologi og tilnærming",
+    "subtitle": "MUNINN – Monitoring, Unifying, Navigating, Integrating Neural Networks",
+    "items": [
+      {
+        "title": "Monitoring",
+        "description": "Innsamling, behandling og analyse av store datamengder for å gi sanntidsinnsikt og forbedret beslutningstaking. Vi skaper systemer som kan tolke og reagere på data i dynamiske miljøer."
+      },
+      {
+        "title": "Unifying",
+        "description": "Vi integrerer ulike teknologier for å skape helhetlige løsninger. Våre systemer er utformet for å fungere sømløst på tvers av plattformer, enten det er innen AI, automatisering eller datastrukturer."
+      },
+      {
+        "title": "Navigating",
+        "description": "Intelligente og autonome systemer som kan tilpasse seg ulike scenarioer og miljøer. Vi jobber med løsninger som muliggjør presis navigasjon og optimalisering av prosesser."
+      },
+      {
+        "title": "Integrating Neural Networks",
+        "description": "Vi utnytter kunstig intelligens og maskinlæring for å skape fleksible og skalerbare løsninger. Ved å bruke avanserte nevrale nettverk kan våre systemer lære, tilpasse seg og forbedre seg over tid."
+      }
+    ]
+  },
+  "services": {
+    "title": "Hva Vi Jobber Med",
+    "items": [
+      {
+        "title": "Softwareutvikling",
+        "description": "Moderne og skalerbare digitale løsninger for web og mobil."
+      },
+      {
+        "title": "Kunstig intelligens",
+        "description": "Utvikling av AI-drevne systemer for analyse, automatisering og beslutningsstøtte."
+      },
+      {
+        "title": "IoT og Smart Teknologi",
+        "description": "Tilkobling av fysiske enheter for smarte og effektive løsninger."
+      },
+      {
+        "title": "Datadrevet Innsikt",
+        "description": "Avansert dataanalyse og visualisering for bedre forretningsbeslutninger."
+      }
+    ]
+  },
   "contact": {
     "title": "Kontakt Oss",
     "description": "Send oss en melding, så tar vi kontakt med deg så snart som mulig.",
+    "cta": {
+      "title": "Vil du vite mer?",
+      "description": "Er du interessert i å samarbeide eller lære mer om hvordan våre løsninger kan gi verdi for deg eller din virksomhet? Vi er alltid åpne for nye muligheter og diskusjoner om fremtidens teknologi."
+    },
     "form": {
       "name": "Navn",
       "name_placeholder": "Ditt navn",
