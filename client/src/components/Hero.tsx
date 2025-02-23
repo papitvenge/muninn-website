@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import { ContactForm } from "./ContactForm";
+import { useTranslation } from "react-i18next";
 
 export function Hero() {
+  const { t } = useTranslation();
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -30,8 +33,8 @@ export function Hero() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
           >
-            Velkommen til
-            <span className="text-primary block mt-2">Muninn Utvikling AS</span>
+            {t('hero.welcome')}
+            <span className="text-primary block mt-2">{t('hero.company')}</span>
           </motion.h1>
 
           <motion.p
@@ -40,7 +43,7 @@ export function Hero() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Et innovativt teknologiselskap med fokus på utvikling av programvare og digitale løsninger for fremtiden.
+            {t('hero.description')}
           </motion.p>
 
           <motion.div
@@ -55,7 +58,7 @@ export function Hero() {
               className="px-8 py-3 rounded-lg bg-primary text-primary-foreground font-medium"
               onClick={() => scrollToSection('tjenester')}
             >
-              Våre Tjenester
+              {t('hero.services')}
             </motion.button>
             <ContactForm />
           </motion.div>

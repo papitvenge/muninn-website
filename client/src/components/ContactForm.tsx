@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import { useTranslation } from "react-i18next";
 import {
   Dialog,
   DialogContent,
@@ -14,7 +15,6 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -34,6 +34,7 @@ type FormValues = z.infer<typeof formSchema>;
 
 export function ContactForm() {
   const [open, setOpen] = useState(false);
+  const { t } = useTranslation();
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -45,7 +46,6 @@ export function ContactForm() {
   });
 
   function onSubmit(values: FormValues) {
-    // Her kan vi legge til logikk for å sende skjemaet
     console.log(values);
     setOpen(false);
     form.reset();
@@ -59,14 +59,14 @@ export function ContactForm() {
           whileTap={{ scale: 0.95 }}
           className="px-8 py-3 rounded-lg bg-primary text-primary-foreground font-medium"
         >
-          Ta kontakt med oss
+          {t('hero.contact')}
         </motion.button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>Kontakt Oss</DialogTitle>
+          <DialogTitle>{t('contact.title')}</DialogTitle>
           <DialogDescription>
-            Send oss en melding, så tar vi kontakt med deg så snart som mulig.
+            {t('contact.description')}
           </DialogDescription>
         </DialogHeader>
         <Form {...form}>
@@ -76,9 +76,9 @@ export function ContactForm() {
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Navn</FormLabel>
+                  <FormLabel>{t('contact.form.name')}</FormLabel>
                   <FormControl>
-                    <Input placeholder="Ditt navn" {...field} />
+                    <Input placeholder={t('contact.form.name_placeholder')} {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -89,9 +89,13 @@ export function ContactForm() {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>E-post</FormLabel>
+                  <FormLabel>{t('contact.form.email')}</FormLabel>
                   <FormControl>
-                    <Input placeholder="din@epost.no" type="email" {...field} />
+                    <Input 
+                      placeholder={t('contact.form.email_placeholder')} 
+                      type="email" 
+                      {...field} 
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -102,10 +106,10 @@ export function ContactForm() {
               name="message"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Melding</FormLabel>
+                  <FormLabel>{t('contact.form.message')}</FormLabel>
                   <FormControl>
                     <Textarea 
-                      placeholder="Hva kan vi hjelpe deg med?" 
+                      placeholder={t('contact.form.message_placeholder')} 
                       className="min-h-[100px]"
                       {...field} 
                     />
@@ -114,7 +118,9 @@ export function ContactForm() {
                 </FormItem>
               )}
             />
-            <Button type="submit" className="w-full">Send melding</Button>
+            <Button type="submit" className="w-full">
+              {t('contact.form.submit')}
+            </Button>
           </form>
         </Form>
       </DialogContent>

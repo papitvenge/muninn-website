@@ -1,0 +1,36 @@
+{
+  "hero": {
+    "welcome": "Velkommen til",
+    "company": "Muninn Utvikling AS",
+    "description": "Et innovativt teknologiselskap med fokus på utvikling av programvare og digitale løsninger for fremtiden.",
+    "services": "Våre Tjenester",
+    "contact": "Ta kontakt med oss"
+  },
+  "about": {
+    "title": "Om Oss",
+    "intro": "I en verden der teknologi utvikler seg i et stadig raskere tempo, er Muninn Utvikling AS dedikert til å ligge i forkant av innovasjon. Vi spesialiserer oss på å utvikle avanserte teknologiske løsninger som kombinerer kunstig intelligens, nettverksbaserte systemer og autonome prosesser.",
+    "approach": "Vår tilnærming bygger på en filosofi om å koble sammen intelligens og teknologi på en sømløs måte. Inspirert av norrøn mytologi, der ravnen Muninn symboliserer hukommelse og kunnskap, utvikler vi systemer som overvåker, analyserer og handler basert på avanserte algoritmer og dataanalyse.",
+    "collaboration": {
+      "title": "Samarbeid og Lokasjon",
+      "text": "Vi har et tett samarbeid med Jotun-Utvikling AS, og sammen utforsker vi nye teknologiske muligheter for å møte morgendagens utfordringer. Vårt felles kontor i Jernbanevegen 6, 2900 Fagernes fungerer som et dynamisk utviklingsmiljø der innovasjon og kreativitet står i sentrum."
+    }
+  },
+  "contact": {
+    "title": "Kontakt Oss",
+    "description": "Send oss en melding, så tar vi kontakt med deg så snart som mulig.",
+    "form": {
+      "name": "Navn",
+      "name_placeholder": "Ditt navn",
+      "email": "E-post",
+      "email_placeholder": "din@epost.no",
+      "message": "Melding",
+      "message_placeholder": "Hva kan vi hjelpe deg med?",
+      "submit": "Send melding"
+    }
+  },
+  "nav": {
+    "home": "Hjem",
+    "about": "Om Oss",
+    "contact": "Kontakt"
+  }
+}

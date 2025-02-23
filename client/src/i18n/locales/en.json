@@ -1,0 +1,36 @@
+{
+  "hero": {
+    "welcome": "Welcome to",
+    "company": "Muninn Development AS",
+    "description": "An innovative technology company focused on developing software and digital solutions for the future.",
+    "services": "Our Services",
+    "contact": "Contact Us"
+  },
+  "about": {
+    "title": "About Us",
+    "intro": "In a world where technology evolves at an ever-increasing pace, Muninn Development AS is dedicated to staying at the forefront of innovation. We specialize in developing advanced technological solutions that combine artificial intelligence, network-based systems, and autonomous processes.",
+    "approach": "Our approach is built on a philosophy of seamlessly connecting intelligence and technology. Inspired by Norse mythology, where the raven Muninn symbolizes memory and knowledge, we develop systems that monitor, analyze, and act based on advanced algorithms and data analysis.",
+    "collaboration": {
+      "title": "Collaboration and Location",
+      "text": "We have a close collaboration with Jotun Development AS, and together we explore new technological possibilities to meet tomorrow's challenges. Our shared office at Jernbanevegen 6, 2900 Fagernes serves as a dynamic development environment where innovation and creativity are at the center."
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Send us a message, and we'll get back to you as soon as possible.",
+    "form": {
+      "name": "Name",
+      "name_placeholder": "Your name",
+      "email": "Email",
+      "email_placeholder": "your@email.com",
+      "message": "Message",
+      "message_placeholder": "How can we help you?",
+      "submit": "Send message"
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "contact": "Contact"
+  }
+}
