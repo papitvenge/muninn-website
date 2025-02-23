@@ -1,6 +1,13 @@
 import { motion } from "framer-motion";
 
 export function Hero() {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-background">
       {/* Animated background elements */}
@@ -45,6 +52,7 @@ export function Hero() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-3 rounded-lg bg-primary text-primary-foreground font-medium"
+              onClick={() => scrollToSection('tjenester')}
             >
               Våre Tjenester
             </motion.button>
@@ -52,6 +60,7 @@ export function Hero() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-3 rounded-lg bg-secondary text-secondary-foreground font-medium"
+              onClick={() => scrollToSection('about')}
             >
               Kontakt Oss
             </motion.button>

@@ -33,11 +33,14 @@ export default function Home() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
+      className="scroll-smooth"
     >
       <Hero />
-      <About />
+      <section id="about">
+        <About />
+      </section>
 
-      <section className="py-20 bg-muted/50">
+      <section id="tjenester" className="py-20 bg-muted/50">
         <div className="container mx-auto px-4">
           <motion.h2
             className="text-3xl font-bold mb-12 text-center"
