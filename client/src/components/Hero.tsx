@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { ContactForm } from "./ContactForm";
 
 export function Hero() {
   const scrollToSection = (sectionId: string) => {
@@ -56,14 +57,7 @@ export function Hero() {
             >
               Våre Tjenester
             </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 rounded-lg bg-secondary text-secondary-foreground font-medium"
-              onClick={() => scrollToSection('about')}
-            >
-              Kontakt Oss
-            </motion.button>
+            <ContactForm />
           </motion.div>
         </div>
       </div>
