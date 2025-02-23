@@ -22,17 +22,17 @@ export function Hero() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
           >
-            The Future of 
-            <span className="text-primary ml-2">Innovation</span>
+            Velkommen til
+            <span className="text-primary block mt-2">Muninn Utvikling AS</span>
           </motion.h1>
 
           <motion.p
-            className="text-lg md:text-xl text-muted-foreground mb-8"
+            className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Discover the next generation of technology solutions that power tomorrow's innovations.
+            Et innovativt teknologiselskap med fokus på utvikling av programvare og digitale løsninger for fremtiden.
           </motion.p>
 
           <motion.div
@@ -46,14 +46,14 @@ export function Hero() {
               whileTap={{ scale: 0.95 }}
               className="px-8 py-3 rounded-lg bg-primary text-primary-foreground font-medium"
             >
-              Get Started
+              Våre Tjenester
             </motion.button>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-3 rounded-lg bg-secondary text-secondary-foreground font-medium"
             >
-              Learn More
+              Kontakt Oss
             </motion.button>
           </motion.div>
         </div>

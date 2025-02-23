@@ -1,12 +1,30 @@
 import { Hero } from "@/components/Hero";
+import { About } from "@/components/About";
 import { motion } from "framer-motion";
-import { LucideIcon } from "lucide-react";
+import { Code2, Brain, Cpu, BarChart3 } from "lucide-react";
 
-interface Feature {
-  title: string;
-  description: string;
-  icon: LucideIcon;
-}
+const features = [
+  {
+    title: "Softwareutvikling",
+    description: "Moderne og skalerbare digitale løsninger for web og mobil.",
+    Icon: Code2
+  },
+  {
+    title: "Kunstig intelligens",
+    description: "Utvikling av AI-drevne systemer for analyse, automatisering og beslutningsstøtte.",
+    Icon: Brain
+  },
+  {
+    title: "IoT og Smart Teknologi",
+    description: "Tilkobling av fysiske enheter for smarte og effektive løsninger.",
+    Icon: Cpu
+  },
+  {
+    title: "Datadrevet Innsikt",
+    description: "Avansert dataanalyse og visualisering for bedre forretningsbeslutninger.",
+    Icon: BarChart3
+  }
+];
 
 export default function Home() {
   return (
@@ -17,15 +35,26 @@ export default function Home() {
       transition={{ duration: 0.5 }}
     >
       <Hero />
+      <About />
 
       <section className="py-20 bg-muted/50">
         <div className="container mx-auto px-4">
+          <motion.h2
+            className="text-3xl font-bold mb-12 text-center"
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            Hva Vi Jobber Med
+          </motion.h2>
+
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
           >
             {features.map((feature, index) => (
               <motion.div
@@ -47,36 +76,3 @@ export default function Home() {
     </motion.div>
   );
 }
-
-const features = [
-  {
-    title: "Innovative Design",
-    description: "Cutting-edge interface that pushes the boundaries of modern web design.",
-    Icon: () => (
-      <svg className="w-10 h-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-      </svg>
-    )
-  },
-  {
-    title: "Smart Technology",
-    description: "Leveraging advanced technology to create seamless experiences.",
-    Icon: () => (
-      <svg className="w-10 h-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" strokeWidth="2"/>
-        <path d="M12 6V12L16 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-      </svg>
-    )
-  },
-  {
-    title: "Future Ready",
-    description: "Built with scalability and future technologies in mind.",
-    Icon: () => (
-      <svg className="w-10 h-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M22 12H18L15 21L9 3L6 12H2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-      </svg>
-    )
-  }
-];
