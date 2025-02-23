@@ -1,15 +1,29 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { useLocation } from "wouter";
+import { useTranslation } from "react-i18next";
+import { Globe } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 export function Navbar() {
   const [location] = useLocation();
+  const { t, i18n } = useTranslation();
 
   const links = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/contact", label: "Contact" }
+    { href: "/", label: t('nav.home') },
+    { href: "/about", label: t('nav.about') },
+    { href: "/contact", label: t('nav.contact') }
   ];
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+  };
 
   return (
     <motion.nav 
@@ -30,22 +44,44 @@ export function Navbar() {
             </motion.span>
           </Link>
 
-          <div className="hidden md:flex space-x-8">
-            {links.map((link) => (
-              <Link key={link.href} href={link.href}>
-                <motion.span
-                  className={`text-sm font-medium cursor-pointer ${
-                    location === link.href 
-                      ? "text-primary" 
-                      : "text-muted-foreground hover:text-foreground"
-                  }`}
-                  whileHover={{ y: -2 }}
-                  whileTap={{ y: 0 }}
-                >
-                  {link.label}
-                </motion.span>
-              </Link>
-            ))}
+          <div className="flex items-center space-x-8">
+            <div className="hidden md:flex space-x-8">
+              {links.map((link) => (
+                <Link key={link.href} href={link.href}>
+                  <motion.span
+                    className={`text-sm font-medium cursor-pointer ${
+                      location === link.href 
+                        ? "text-primary" 
+                        : "text-muted-foreground hover:text-foreground"
+                    }`}
+                    whileHover={{ y: -2 }}
+                    whileTap={{ y: 0 }}
+                  >
+                    {link.label}
+                  </motion.span>
+                </Link>
+              ))}
+            </div>
+
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <Globe className="h-5 w-5" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem onClick={() => changeLanguage('nb')}>
+                  <span className={i18n.language === 'nb' ? 'text-primary font-medium' : ''}>
+                    Norsk
+                  </span>
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => changeLanguage('en')}>
+                  <span className={i18n.language === 'en' ? 'text-primary font-medium' : ''}>
+                    English
+                  </span>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
         </div>
       </div>
