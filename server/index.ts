@@ -61,7 +61,7 @@ app.use((req, res, next) => {
   }
 
   // Get public URL from Replit environment
-  const port = 5000;
+  const port = 5001;
   server.listen(port, "0.0.0.0", () => {
     const localUrl = `http://0.0.0.0:${port}`;
     log(`Server running at ${localUrl}`);
