@@ -17,8 +17,8 @@ export function Navbar() {
 
   const links = [
     { href: "/", label: t('nav.home') },
-    { href: "/about", label: t('nav.about') },
-    { href: "/contact", label: t('nav.contact') }
+    { href: "/about", label: t('om oss') },
+    { href: "/contactform ", label: t('kontakt') }
   ];
 
   const changeLanguage = (lng: string) => {
@@ -50,7 +50,7 @@ export function Navbar() {
                 }
               }}
             >
-              Muninn
+              Muninn-Utvikling
             </motion.a>
           </Link>
 
